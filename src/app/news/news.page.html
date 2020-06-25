@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center; color: royalblue;">News Headlines</ion-title>
+
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card style="background-color:aliceblue;" *ngFor="let article of data?.articles" (click)="onGoToNewsSinglePage(article)">
+      <ion-img style="height: 50px;" src="https://media3.s-nbcnews.com/j/newscms/2018_21/2442281/og-nbcnews1200x630_c986de7e1bb6ad2281723b692aa61990.nbcnews-fp-1200-630.png"></ion-img>
+    <ion-card-header>
+      <ion-card-title style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">{{article.title}} </ion-card-title>
+      <p>Published: {{article.publishedAt}}</p>
+    </ion-card-header>
+  
+    
+  </ion-card> 
+
+</ion-content>
